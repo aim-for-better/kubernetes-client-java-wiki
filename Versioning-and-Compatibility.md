@@ -1,0 +1,35 @@
+### Client versioning
+
+The Java client uses Semantic Versioning. We increment the major version number whenever we
+regenerate the client for a new Kubernetes release version (see table below). Whenever we do
+this there are new APIs added and possibly breaking changes in the generated Kubernetes API
+Stubs. Whenever you upgrade a major version, be prepared for potential breaking changes.
+
+
+
+### Compatibility
+
+|  client version  | 1.13      | 1.14     | 1.15     |  1.16     |  1.17    |  1.18    |
+|------------------|-----------|----------|----------|-----------|----------|----------|
+|  5.0.0           |  ✓        |  -       |  -       | x         | x        | x        |
+|  6.0.1           |  +        |  ✓       |  -       | -         | x        | x        |
+|  7.0.0           |  +        |  +       |  ✓       | -         | -        | x        |
+|  8.0.2           |  +        |  +       |  +       | ✓         | -        | -        |
+|  9.0.2           |  +        |  +       |  +       | +         | ✓        | -        |
+|  10.0.0          |  +        |  +       |  +       | +         | +        | ✓        |
+
+Key: 
+
+* `✓` Exactly the same features / API objects in both java-client and the Kubernetes
+  version.
+* `+` java-client has features or api objects that may not be present in the
+  Kubernetes cluster, but everything they have in common will work.
+* `-` The Kubernetes cluster has features the java-client library can't use
+  (additional API objects, etc).
+* `x` The Kubernetes cluster has no guarantees to support the API client of
+  this version, as it only promises _n_-2 version support. It is not tested,
+  and operations using API versions that have been deprecated and removed in
+  later server versions won't function correctly.
+
+See the [CHANGELOG](./CHANGELOG.md) for a detailed description of changes
+between java-client versions.
