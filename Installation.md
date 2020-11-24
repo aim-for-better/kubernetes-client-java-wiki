@@ -1,0 +1,45 @@
+
+### Installation
+
+To install the Java client library to your local Maven repository, simply execute:
+
+```shell
+git clone --recursive https://github.com/kubernetes-client/java
+cd java
+mvn install
+```
+
+Refer to the [official documentation](https://maven.apache.org/plugins/maven-deploy-plugin/usage.html) for more information.
+
+#### Maven users
+
+Add this dependency to your project's POM:
+
+```xml
+<dependency>
+    <groupId>io.kubernetes</groupId>
+    <artifactId>client-java</artifactId>
+    <version>10.0.0</version>
+</dependency>
+```
+
+#### Gradle users
+
+```groovy
+compile 'io.kubernetes:client-java:10.0.0'
+```
+
+#### Others
+
+At first generate the JAR by executing:
+
+```
+git clone --recursive https://github.com/kubernetes-client/java
+cd java/kubernetes
+mvn package
+```
+
+Then manually install the following JARs:
+
+* target/client-java-api-10.0.1-SNAPSHOT.jar
+* target/lib/*.jar
