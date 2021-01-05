@@ -11,3 +11,4 @@
 4. [Development and Contributing](https://github.com/kubernetes-client/java/wiki/4.-Development-and-Contributing)
 5. [Generate Java CRD Models](https://github.com/kubernetes-client/java/wiki/5.-Generate-Java-CRD-Model)
 6. [Known Issues](https://github.com/kubernetes-client/java/wiki/6.-Known-Issues)
+7. [FAQ](https://github.com/kubernetes-client/java/wiki/7.-FAQ)
